@@ -28,13 +28,14 @@ public class CredentialServiceImpl implements CredentialServices {
 	@Override
 	public String emailGenerator(Employee employee, String department) {
 		// TODO Auto-generated method stub
-		return (employee.getFirstName()+employee.getLastName()).toLowerCase()+"@"+department+".companyname.com";
+		String x = ((employee.getFirstName()+employee.getLastName()).toLowerCase()+"@"+department+".companyname.com");
+	    return x; 
 	}
 
 	@Override
 	public void displayCredentials(Employee employee, String department) {
 		// TODO Auto-generated method stub
-		System.out.println("Hello "+employee.getFirstName()+employee.getLastName()+"your credentials are as follows: ");
+		System.out.println("Hello "+employee.getFirstName()+employee.getLastName()+" your credentials are as follows: ");
 		System.out.println("Email ID - "+emailGenerator(employee, department));
 		System.out.println("Password is: "+passwordGenerator());
 		
